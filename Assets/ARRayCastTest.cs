@@ -15,9 +15,7 @@ public class ARRayCastTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //var raycastPoint = Input.GetTouch(0).position;
         var raycastPoint = Camera.main.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
-        //Debug.Log(raycastPoint);
         if (m_RaycastManager.Raycast(raycastPoint, hits, TrackableType.PlaneWithinPolygon))
         {
             var hitPose = hits[0].pose;
